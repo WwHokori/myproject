@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Gouranga Shadow';
+    src: url('../fonts/Gouranga-Shadow.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Gouranga Pixel';
+    src: url('../fonts/Gouranga-Pixel.otf') format('opentype');
+}
+
+.calculator-container{
+    margin-top: 20px;
+}
+.calculator {
+    margin: 0 auto;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    border-radius: 12px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: linear-gradient(to top, #0D120D, #021A02);
+}
+
+.calculator:hover {
+    border-color: limegreen;
+}
+
+.calculator-title {
+    margin-top: 60px;
+    color: limegreen;
+    font-size: 2.75rem;
+    position: relative;
+    text-align: center;
+}
+
+.calculator-title span{
+    position: relative;
+    font-family: 'Gouranga Shadow';
+    color: darkgreen;
+}
+
+.calculator-title span::before{
+    content: "Рівняння Шредінгера";
+    position: absolute;
+    font-family: 'Gouranga Pixel';
+    color: limegreen;
+    margin-top: 5px;
+}
+
+.input-group {
+    color: #BCFFBC;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #D9FFD9;
+}
+
+button-calc {
+    background: limegreen;
+    color: black;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button-calc:hover {
+    background: #067a36;
+}
+
+#result {
+    color: #BCFFBC;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .calculator {
+        width: 90%; /* Use most of the screen width */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .calculator-title {
+        font-size: 1.5rem; /* Reduce title size */
+        margin-top: 40px;
+    }
+
+    .input-group {
+        margin-bottom: 10px; /* Reduce spacing between inputs */
+    }
+
+    .input-group label {
+        font-size: 0.9rem; /* Smaller labels */
+    }
+
+    .input-group input {
+        font-size: 0.9rem; /* Adjust input font size */
+        padding: 8px; /* Smaller padding */
+    }
+
+    button-calc {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 6px 10px; /* Adjust button padding */
+    }
+
+    #result {
+        font-size: 1rem; /* Reduce result font size */
+    }
+}

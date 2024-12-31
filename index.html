@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="styles/slider.css" rel="stylesheet">
+    <link href="styles/game.css" rel="stylesheet">
+    <link href="styles/form.css" rel="stylesheet">
+    <!--Лінк Google шрифтів-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link href="https://fonts.googleapis.com/css?family=Squada+One&display=swap" rel="stylesheet">
+    <!--Лінк SwiperJS CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#essays">Essays</a>
+        <a href="#game">Game</a>
+    </div>
+
+    <div class="welcome-container">
+        <h1>Welcome to<br>My <span>Project</span></h1>
+        <p>Проєкт підкреслює теорію і практику, приділяючи увагу ясності</p>
+    </div>
+
+    <div id = "essays" class="anchor"></div>
+    <h2 class="section-title">Essays</h2>
+
+    <div class="slider-container">
+    <div class="container swiper">
+        <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide" onclick="window.open('essays/essay1.html', 'blank');">
+                    <a id="" class="card-link">
+                        <img src="images/ict.jpg" alt="Card Image" class="card-image">
+                        <p class="badge ict">ICT</p>
+                        <h2 class="card-title">Шлях в інформаційно-комп'ютерні технології</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide" onclick="window.open('essays/essay2.html', 'blank');">
+                    <a href="" class="card-link">
+                        <img src="images/projects.jpg" alt="Card Image" class="card-image">
+                        <p class="badge developer">Vision</p>
+                        <h2 class="card-title">Ідеї та проекти для реалізації в майбутньому</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide" onclick="window.open('essays/essay3.html', 'blank');">
+                    <a href="" class="card-link">
+                        <img src="images/computing.jpg" alt="Card Image" class="card-image">
+                        <p class="badge future">Computing</p>
+                        <h2 class="card-title">Минуле і майбутнє комп'ютингу</h2>
+                        <button class="card-button material-symbols-rounded">arrow_forward</button>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+    </div>
+    </div>
+
+    <div id = "game" class="anchor"></div>
+    <h2 class="section-title">Game</h2>
+
+    <div class = "h3"><span>Flappy Bird</span></div>
+    <div class = "game-container">
+        <div class="game-frame">
+            <canvas id="canvas" width="276" height="414"></canvas>
+        </div>
+        <div class="game-description">
+                <div class="text-box">
+                    Хто ж її не знає, знаменита <span style ="color: limegreen">Flappy Bird.</span>
+                        <br>Гра для мобільних пристроїв, розроблена в'єтнамським... хоча, навіщо вам
+                        взагалі здалася ця інформація? Про всяк випадок <span style ="color: limegreen">поясню принцип гри:</span><br>
+                        За допомогою торкань екрана ви маєте контролювати політ птаха між
+                        рядами зелених труб, не зачіпаючи їх. При <span style ="color: red">зіткненні</span> з ними відбувається
+                        <span style ="color: red">завершення гри. </span><br>-----   -----   -----
+                        <br>Під час торкання екрана птах робить невеликий ривок вгору. Якщо ривок
+                        <span style ="color: red">відсутій</span>, то птах падає через силу тяжіння, і гра також <span style ="color: red">завершується</span>.
+                        <span style ="color: limegreen">Очки набираються</span> при кожному успішному перельоті між двома трубами.<br>-----   -----   -----
+                        <br>Для <span style ="color: limegreen">управління птахом</span> я пропоную використовувати клавішу <span style ="color: limegreen">W</span>. Ви також можете затиснути її в разі потреби.<br>-----   -----   -----
+                        <br><span style ="color: limegreen">Бажаю веселої гри!</span>
+                </div>
+        </div>
+    </div>
+
+    <!--калькулято-->
+    <div id = "form" class="anchor">
+    <h2 class="section-title">Form</h2>
+
+    <div class="calculator-title"><span>Рівняння Шредінгера</span></div>
+
+    <div class="calculator-container"></div>
+    <div class="calculator">
+        <form id="schrodinger-form">
+            <div class="input-group">
+                <label for="waveFunction">Wave Function (ψ):</label>
+                <input type="number" id="waveFunction" placeholder="Enter ψ value" required>
+            </div>
+            <div class="input-group">
+                <label for="greensFunction">Green's Function (G):</label>
+                <input type="number" id="greensFunction" placeholder="Enter G value" required>
+            </div>
+            <div class="input-group">
+                <label for="coordinates">Coordinate (r'):</label>
+                <input type="number" id="coordinates" placeholder="Enter r' value" required>
+            </div>
+            <button-calc type="button-calc" id="calculate-btn">Calculate</button-calc>
+        </form>
+        <div id="result">
+            Result: <span id="result-value">???</span>
+        </div>
+    </div>
+    </div>
+
+    <!------------>
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/copy.js" defer></script>
+    <!--Лінк SwiperJS script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+</body>
+</html>

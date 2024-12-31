@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Gouranga Shadow';
+    src: url('../fonts/Gouranga-Shadow.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Gouranga Pixel';
+    src: url('../fonts/Gouranga-Pixel.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFPRODISPLAYREGULAR.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+        }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display';
+}
+
+body {
+    background: #000a00;
+    color: white;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #000a00;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0 5px 25px;
+    font-size: 1.35rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    color: limegreen;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.welcome-container {
+    display: flex;
+    min-height: 40vh;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px; margin-right: 40px;
+    padding-top: 90px; padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.welcome-container h1{
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.welcome-container span {
+    position: relative;
+    font-family: 'Gouranga Shadow';
+    color: darkgreen;
+}
+
+.welcome-container h1 span::before{
+    content: "Project";
+    position: absolute;
+    font-family: 'Gouranga Pixel';
+    color: limegreen;
+    margin-top: 10px;
+}
+
+.welcome-container p {
+    font-size: 1.375rem;
+    padding-top: 20px;
+    margin-bottom: 15px;
+    max-width: 50%;
+    line-height: 1.2;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: limegreen;
+    margin-top: 100px; margin-left: 40px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 47vw;
+    height: 1px;
+    background-color: limegreen;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+@media screen and (max-width: 768px){
+    .navbar {
+        align-items: center;
+        justify-content: center;
+        padding-left: 2%;
+    }
+
+    .welcome-container p {
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        font-size: 1.19rem;
+    }
+    .welcome-container {
+        align-items: center;
+        justify-content: center;
+        margin: 0 15px;
+        padding-top: 40px 5% 0 5%;
+    }
+    .welcome-container h1 {
+        font-size: 3.5rem;
+    }
+
+    .section-title {
+        margin-left: 0;
+        text-align: center;
+    }
+    .section-title::after {
+        margin: 0 20%;
+        width: 60vw;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    .welcome-container p {
+        align-items: center;
+        justify-content: center;
+        max-width: 80%;
+        font-size: 1.19rem;
+    }
+}

@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Gouranga Shadow';
+    src: url('../fonts/Gouranga-Shadow.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Gouranga Pixel';
+    src: url('../fonts/Gouranga-Pixel.otf') format('opentype');
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: linear-gradient(to top, #0D120D, #021A02);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.game-container:hover {
+    border-color: #0da34b;
+}
+
+.game-frame {
+    width: 276px;
+    height: 414px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #222;
+    position: relative;
+}
+
+#canvas {
+    background-color: #30c0df;
+    border: 2px solid black;
+    display: block;
+    border-radius: 15px;
+}
+
+.game-description {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-box {
+    padding: 18px;
+    border: 2px solid transparent;
+    background: linear-gradient(to top, #0D120D, #021A02);
+    border-radius: 12px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.2s ease;
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+}
+
+.text-box:focus,
+.text-box:hover {
+    border-color:#e67e22;
+    outline: none;
+}
+
+.h3 {
+    font-size: 3.125rem;
+    line-height: 1;
+    margin: 70px 0 20px 50px;
+    position: relative;
+    text-align: center;
+}
+
+.h3 span{
+    position: relative;
+    font-family: 'Gouranga Shadow';
+    color: darkgreen;
+}
+
+.h3 span::before{
+    content: "Flappy Bird";
+    position: absolute;
+    font-family: 'Gouranga Pixel';
+    color: limegreen;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .h3{
+        margin-left: 0;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .text-box:focus,
+    .text-box:hover {
+        border-color: #0da34b;
+    }
+
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .game-container:hover {
+        border: none;
+    }
+
+    .game-frame {
+        width: 240px;
+        height: 360px;
+    }
+
+    #canvas {
+        width: 240px;
+        height: 360px;
+    }
+
+    .game-description {
+        max-width: 100%;
+    }
+
+    .text-box {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+
+}

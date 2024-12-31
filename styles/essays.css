@@ -1,0 +1,98 @@
+.essay-full-h {
+    font-family: 'SF Pro Display';
+    font-size: 4.25rem;
+    line-height: 1;
+    margin-bottom: 70px; margin-top: 120px;
+    max-width: 60%;
+    position: relative;
+    margin-left: 40px;
+    color: limegreen;
+}
+
+.essay-full-plan {
+    border: 2px solid limegreen;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin-left: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.essay-full-plan p {
+    font-size: 1.425rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.essay-full-plan a {
+    display: block;
+    font-size: 1.375rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: limegreen;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.essay-full-plan a:hover {
+    color: #044d24;
+    transform: translateX(5px);
+}
+
+.essay-full-plan a::before {
+    content: "• ";
+}
+
+.essay-full-p {
+    font-size: 1.375rem;
+    font-family: 'SF Pro Display';
+    text-align: justify;
+    margin: 0 3%;
+    margin-top: 50px;
+}
+
+.essay-full-p p {
+    margin-bottom: 15px;
+}
+
+.essay-full-p br{
+    margin-bottom: 50px;
+}
+
+.highlight {
+    transition: background-color 2s ease-out;
+    background-color: rgba(40, 150, 75, 0.5);
+}
+
+@media screen and (max-width: 768px){
+    .essay-full-plan {
+        max-width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .essay-full-plan p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .essay-full-plan a {
+        font-size: 1.125rem;
+    }
+
+    .essay-full-h {
+        font-size: 2.8rem;
+        max-width: 100%;
+        margin: 80px 5% 40px 5%;
+        text-align: center;
+    }
+    .essay-full-p {
+        font-size: 1.1rem;
+        text-align: unset;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .essay-full-h {
+        max-width: 90%;
+    }
+}
